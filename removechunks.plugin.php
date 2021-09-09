@@ -1,5 +1,5 @@
 // RemoveChunks from display
-// C Hunton 
+// BBloke
 // Date: 15-6-21
 //
 // This plugin should remove unwanted chunk names rendered to the output which should be cleared when the document is process
