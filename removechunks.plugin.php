@@ -3,13 +3,14 @@
 // Date: 15-6-21
 //
 // This plugin should remove unwanted chunk names rendered to the output which should be cleared when the document is process
+// Updated what it can remove.
 
 // System Events: OnWebPagePrerender
 
 $showMatches = false;
 
-$re[] = '/({{[[:alnum:]]*}})/mix';				// Chunks
-$re[] = '/(\[\+[[:alnum:]]*\+\])/mix';			// Placeholders
+$re[] = '/({{(.*?)}})/mix';				// Chunks
+$re[] = '/(\[\+(.*?)\+\])/mix';			// Placeholders
 
 $output = $modx->documentOutput; // get the parsed document
 
