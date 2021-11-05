@@ -4,6 +4,7 @@
 //
 // This plugin should remove unwanted chunk names rendered to the output which should be cleared when the document is process
 // Updated what it can remove.
+// Updated so the placeholder code is removed rather than replaced with a space
 
 // System Events: OnWebPagePrerender
 
@@ -17,7 +18,7 @@ $output = $modx->documentOutput; // get the parsed document
 foreach ( $re as $search )
 {
 	preg_match_all($search, $output, $matches, PREG_SET_ORDER, 0);
-	$output = preg_replace($search, ' ' , $output);
+	$output = preg_replace($search, '' , $output);
 }
 
 // Print the entire match result
