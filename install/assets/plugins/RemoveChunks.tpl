@@ -10,7 +10,7 @@
  * @package     evo
  * @internal    @events OnWebPagePrerender,
  * @internal    @modx_category Content
- * @internal    @properties &showMatches=0
+ * @internal    @properties &showMatches=Show Removed Chunks and Placeholders;list;true,false;false
  * @internal    @installset base
  * @reportissues https://github.com/BBloke/RemoveChunks/issues/
  * @author      BBloke
@@ -29,6 +29,6 @@ foreach ( $re as $search )
 }
 
 // Print the entire match result
-if ( $showMatches == 1 ) var_dump($matches);
+if ( $showMatches !== false ) var_dump($matches);
 
 $modx->documentOutput = $output;
