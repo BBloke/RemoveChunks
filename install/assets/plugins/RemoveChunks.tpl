@@ -14,7 +14,7 @@
  * @internal    @installset base
  * @reportissues https://github.com/BBloke/RemoveChunks/issues/
  * @author      BBloke
- * @lastupdate  11-11-2021
+ * @lastupdate  12-11-2021
  */
  
 $re[] = '/({{(.*?)}})/mix';				// Chunks
@@ -29,6 +29,6 @@ foreach ( $re as $search )
 }
 
 // Print the entire match result
-if ( $showMatches !== false ) var_dump($matches);
+if ( $showMatches === true ) var_dump($matches);
 
 $modx->documentOutput = $output;
